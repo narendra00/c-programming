@@ -1,0 +1,36 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int s,t,a,b,m,n,count=0,count1=0;
+    scanf("%d%d",&s,&t);
+    scanf("%d%d",&a,&b);
+    scanf("%d%d",&m,&n);
+    int app[m],org[n];
+    for(int i=0;i<m;i++){
+        scanf("%d",&app[i]);
+        app[i]=app[i]+a;
+        if(app[i]>=s && app[i]<= t){
+            count++;
+        }
+    }
+    
+    for(int i=0;i<n;i++){
+        scanf("%d",&org[i]);
+        org[i]=org[i]+b;
+        if(org[i]>=s && org[i]<= t){
+            count1++;
+        }
+    }
+    printf("%d\n",count);
+    printf("%d\n",count1);
+
+    return 0;
+}

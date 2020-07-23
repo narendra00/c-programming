@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,k;
+    scanf("%d%d",&n,&k);    
+    int a[n],rot=k%n;
+    for(int i=0;i<n;i++)
+        scanf("%d",&a[i]);
+
+    for(int i=0;i<n;i++){
+        if(i+rot<n)
+            printf("%d\n",a[i+rot]);
+        else
+            printf("%d\n",a[i+rot-n]);    
+    }
+    
+    return 0;
+}
