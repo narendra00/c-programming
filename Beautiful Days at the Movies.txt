@@ -1,0 +1,33 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int rev(int l){
+    int sum=0;
+    while(l!=0){
+       sum=sum*10+l%10;
+       l=l/10;
+    }
+    return(sum);
+}
+
+int main()
+{
+    int i,j,c=0,num;
+    long int k;
+    scanf("%d%d%ld",&i,&j,&k);
+
+    for(int s=i; s<=j; s++){
+      int x= (s-rev(s))%(k);
+        if(x == 0)
+            c++;
+    }
+    printf("%d",c);
+    return 0;
+}
