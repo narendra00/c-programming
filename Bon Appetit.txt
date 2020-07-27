@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,k,actual,charged,refund;
+    scanf("%d%d",&n,&k);
+    int bill[n],sum=0;
+    for(int i=0;i<n;i++){
+        scanf("%d",&bill[i]);
+        sum=sum+bill[i];
+    }
+    scanf("%d",&charged);
+    actual=(sum-bill[k])/2;
+    refund=charged-actual;
+    if(refund<=0){
+        printf("Bon Appetit");
+    }
+    else
+    printf("%d",refund);
+    return 0;
+}
