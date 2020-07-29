@@ -1,0 +1,30 @@
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    
+    int arr[26],max=0;;
+    for(int i=0;i<26;i++){
+      scanf("%d",&arr[i]);
+    }
+    char str[10];
+    scanf("%s",str); 
+    int length=strlen(str);
+  
+     for (int i=0; i<length; i++){
+        int value=str[i];
+        if(arr[value-97]>max){
+            max=arr[value-97];
+        }
+     }
+
+    printf("%d",(length*max));
+    return 0;
+}
