@@ -1,0 +1,19 @@
+#include <stdint.h>
+#include <stdio.h>
+
+int main(){
+    int test;
+    scanf("%d",&test);
+    while(test-->0){
+        int n,c,m;
+        scanf("%d%d%d",&n,&c,&m);
+        int choc=n/c;
+        n=choc;
+        while(n>=m){
+            choc+=n/m;
+            n=n/m+n%m;
+        }
+        printf("%d\n",choc);
+    }
+    return(0);
+}
