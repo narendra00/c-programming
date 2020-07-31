@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int b,n,m;
+    scanf("%d%d%d",&b,&n,&m);
+    int key[n],drive[m];
+    for(int i=0;i<n;i++){
+        scanf("%d",&key[i]);
+    }
+    for(int i=0;i<m;i++){
+        scanf("%d",&drive[i]);
+    }
+    int max=-1;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            if((key[i]+drive[j])>max && (key[i]+drive[j])<=b){
+                max=(key[i]+drive[j]);
+            }
+        }
+    }
+      printf("%d",max);
+    return 0;
+}
