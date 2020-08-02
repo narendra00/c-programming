@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main(){
+    int n,count,max=0;
+    scanf("%d",&n);
+    int arr[n],arr2[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    
+    for(int i=0;i<n;i++){
+        int check=0;
+        for(int k=0;k<i;k++){
+            if(arr[i]==arr[k])
+            check=1;
+        }
+        if(check==0){
+            count=0;
+            for(int j=0;j<n;j++){
+                if(arr[i]==arr[j]){
+                    count++;
+                }
+            }
+            printf("%d=%d\n",arr[i],count);
+            
+        }    
+    }
+   
+    return 0;
+}
