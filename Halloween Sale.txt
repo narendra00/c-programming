@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int p,d,m,s;
+    scanf("%d%d%d%d",&p,&d,&m,&s);    
+    int count=0,a=p;
+    while(p<=s){
+    count++;
+        if(a-d>=m)
+            a=a-d;
+        else
+            a=m;
+        p+=a;
+    }
+    printf("%d",count);
+   
+    return 0;
+}
