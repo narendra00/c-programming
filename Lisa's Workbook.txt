@@ -1,0 +1,30 @@
+#include <stdint.h>
+#include <stdio.h>
+
+int main(){
+    int n,m,red=0,index=0;
+    scanf("%d%d",&n,&m);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+        int j=0,min=0,max=0;
+        while(j<arr[i]){
+            index++;
+            int d=arr[i]-max;
+                  if(d>=m){
+                    min=max+1;
+                  max=max+m ; 
+                  }
+                  else{
+                  min=max+1;
+                  max=max+d;
+                  }
+              if(index>=min && index<=max)
+                  red++;   
+              j=j+m;          
+        }
+        
+    }
+    printf("%d",red);
+    return(0);
+}
