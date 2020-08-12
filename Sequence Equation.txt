@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int n,x;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=1;i<=n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=1;i<=n;i++){
+        x=i;
+        for(int j=1;j<=n;j++){
+           if(x==arr[j]){
+               x=j;
+               for(int k=1;k<=n;k++){
+                   if(x==arr[k]){
+                       printf("%d\n",k);
+                       break;
+                   }
+               }
+               break;
+           }
+           
+        }
+    }    
+     return 0;
+}
+ 
