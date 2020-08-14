@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int count=0;
+void swap(int *xp, int *yp) 
+{ 
+    int temp = *xp; 
+    *xp = *yp; 
+    *yp = temp; 
+    count++;
+}
+
+int main(){
+    int i,j,n,min;
+  //  printf("Enter size of array:->");
+    scanf("%d",&n);
+    int arr[n];
+    //printf("Enter Element of array:->");
+    for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+    }
+    
+     for (int i = 0; i < n; i++) {
+    
+       for (int j = 0; j < n - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+            swap(&arr[j], &arr[j + 1]);
+        }
+       }
+    
+     }
+
+    printf("Array is sorted in %d swaps.",count);
+    printf("\nFirst Element: %d",arr[0]);
+    printf("\nLast Element: %d",arr[n-1]);
+    return 0;
+}
