@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main(){
+  int i,j,n,c=0,v=0;
+  scanf("%d",&n);
+    char ch[n];
+     scanf("%s",ch);
+ for(i=0;i<=n;i++){
+     if(ch[i]=='d' || ch[i]=='D'){
+         c=c-1;
+     }
+     else if(ch[i]=='u' || ch[i]=='U'){
+         c=c+1;
+     }
+     if(c == 0 && ch[i] == 'U')
+                ++v;
+ }
+  printf("%d",v);
+ return 0;
+}
