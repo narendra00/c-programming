@@ -1,36 +1,26 @@
 #include<stdio.h>
 
-int count=0;
-void swap(int *xp, int *yp) 
-{ 
-    int temp = *xp; 
-    *xp = *yp; 
-    *yp = temp; 
-    count++;
-}
-
-void main(){
-    int i,j,n,min;
-    printf("Enter size of array:->");
+int main(){
+    int n,count=0;
     scanf("%d",&n);
     int arr[n];
-    printf("Enter Element of array:->");
     for(int i=0;i<n;i++){
     scanf("%d",&arr[i]);
     }
     
-     for (i = 0; i < n-1; i++) 
-       { 
-         min=i;
-         for (j = i+1; j < n; j++)
-             if(arr[j]<arr[min])
-                min=j;
-        if(arr[i]>arr[min])
-        swap(&arr[min], &arr[i]); 
-    }
-    
-    for(int i=0;i<n;i++){
-    printf("%d ",arr[i]);
-    }
-    printf("\n%d",count);
+        int temp,i=0;
+        while(i<n){
+            if(arr[i] != i+1){
+                temp = arr[i];
+                arr[i] = arr[temp-1];
+                arr[temp-1]=temp;
+                count++;
+            }
+            else{
+                i++;
+            }
+        }
+
+    printf("%d",count);
+    return 0;
 }
