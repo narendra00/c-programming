@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+
+int main() {
+    void updat(int,int);
+    int a, b;
+    scanf("%d %d", &a, &b);
+   updat(a,b);
+  
+
+    return 0;
+}
+void updat(int a,int b) {
+    // Complete this function
+int s=a + b;
+printf("%d\n",s);
+int m=a - b;
+if(m<0){
+     printf("%d",(m*(-1)));
+}else{
+printf("%d",m);}
+}
